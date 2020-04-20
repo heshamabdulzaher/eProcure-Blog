@@ -11,6 +11,7 @@ $txtColor: #121212;
   border: 0;
   outline: 0;
   max-width: 100%;
+  line-height: 1.5;
   font-family: 'Lexend Deca', sans-serif;
 }
 
@@ -24,6 +25,7 @@ a {
   text-decoration: none;
   display: inline-block;
   color: $txtColor;
+  cursor: pointer;
 }
 ul {
   list-style-type: none;

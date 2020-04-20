@@ -13,7 +13,6 @@ body {
   background-color: #fff;
   color: #1d2b36;
   font-weight: normal;
-  height: 3000vh;
 }
 
 a {
@@ -23,19 +22,11 @@ a {
   cursor: pointer;
 }
 
-ul {
-  list-style-type: none;
-}
-
 .main-container {
   max-width: 1200px;
   width: 100%;
   margin: auto;
   padding: 0 30px;
-}
-
-.gradient {
-  background-image: linear-gradient(to left, #6a11cb 0%, #2575fc 100%);
 }
 
 .flex {
@@ -96,6 +87,9 @@ header .eProcure-logo {
 header .first-row {
   padding: 12px 0;
 }
+header ul {
+  list-style-type: none;
+}
 header .categories-row {
   background-color: #f6f6f7;
 }
@@ -107,7 +101,8 @@ header .categories-row a:hover {
   background-color: #efeff1;
 }
 header .categories-row a.active {
-  background-color: #e5e5e7;
+  background-color: rgba(77, 190, 236, 0.13);
+  color: #136bb1;
   font-weight: bold;
 }
 

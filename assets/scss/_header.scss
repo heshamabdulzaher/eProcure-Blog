@@ -5,6 +5,9 @@ header {
   .first-row {
     padding: 12px 0;
   }
+  ul {
+    list-style-type: none;
+  }
   .categories-row {
     background-color: $gColor;
     a {
@@ -14,7 +17,8 @@ header {
         background-color: #efeff1;
       }
       &.active {
-        background-color: #e5e5e7;
+        background-color: rgba(77, 190, 236, 0.13);
+        color: $pColor;
         font-weight: bold;
       }
     }

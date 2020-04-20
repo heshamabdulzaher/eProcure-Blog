@@ -12,6 +12,7 @@ body {
   background-color: #fff;
   color: #121212;
   font-weight: normal;
+  height: 3000vh;
 }
 
 a {
@@ -25,7 +26,7 @@ ul {
 }
 
 .main-container {
-  max-width: 1300px;
+  max-width: 1200px;
   width: 100%;
   margin: auto;
   padding: 0 30px;
@@ -41,7 +42,7 @@ ul {
 .flex.flex-wrap {
   flex-wrap: wrap;
 }
-.flex.flex-dir-column {
+.flex.flex-dir-col {
   flex-direction: column;
 }
 .flex.flex-center {
@@ -61,30 +62,9 @@ ul {
   background-color: #136bb1;
   color: #fff;
   height: 48px;
+  line-height: 48px;
   padding: 0 36px;
-  font-size: 16px;
-  display: inline-flex;
-  align-items: center;
-}
-
-.section-title {
-  text-align: center;
-  position: relative;
-  padding-bottom: 20px;
-  margin-bottom: 60px;
-}
-.section-title::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 180px;
-  height: 3px;
-  opacity: 0.3;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  background: linear-gradient(110deg, #136bb1 0%, #923b8d 100%);
+  font-size: 18px;
 }
 
 header .eProcure-logo {
@@ -107,6 +87,21 @@ header .categories-row a:hover {
 header .categories-row a.active {
   background-color: #e5e5e7;
   font-weight: bold;
+}
+
+.featured-artice-banner .cover {
+  height: 400px;
+  background-color: #136bb1;
+}
+.featured-artice-banner .content {
+  padding: 24px 0;
+  background-color: #f6f6f7;
+  border-bottom: 1px solid #ebe9e9;
+}
+.featured-artice-banner .content span {
+  opacity: 0.7;
+  display: block;
+  margin-bottom: 6px;
 }
 
 /*# sourceMappingURL=styles.css.map */

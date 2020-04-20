@@ -1,0 +1,23 @@
+header {
+  .eProcure-logo {
+    height: 100%;
+  }
+  .first-row {
+    padding: 12px 0;
+  }
+  .categories-row {
+    background-color: #f6f6f7;
+    a {
+      padding: 14px 20px;
+      cursor: pointer;
+      transition: 0.2s ease-in;
+      &:hover {
+        background-color: #efeff1;
+      }
+      &.active {
+        background-color: #e5e5e7;
+        font-weight: bold;
+      }
+    }
+  }
+}

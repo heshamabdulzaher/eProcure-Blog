@@ -9,20 +9,19 @@
 }
 
 body {
-  background-color: #f8f8f8;
-  color: #1d252d;
+  background-color: #fff;
+  color: #121212;
   font-weight: normal;
-}
-
-p {
-  line-height: 30px;
-  font-size: 18px;
 }
 
 a {
   text-decoration: none;
   display: inline-block;
-  color: #1d252d;
+  color: #121212;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .main-container {
@@ -42,7 +41,7 @@ a {
 .flex.flex-wrap {
   flex-wrap: wrap;
 }
-.flex.flex-direction-column {
+.flex.flex-dir-column {
   flex-direction: column;
 }
 .flex.flex-center {
@@ -58,16 +57,14 @@ a {
 
 .btn {
   cursor: pointer;
-  border-radius: 40px;
-  height: 54px;
+  border-radius: 4px;
+  background-color: #136bb1;
+  color: #fff;
+  height: 48px;
   padding: 0 36px;
-  font-size: 18px;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  font-size: 16px;
   display: inline-flex;
   align-items: center;
-}
-.btn.white-btn {
-  background-color: #fff;
 }
 
 .section-title {
@@ -87,7 +84,29 @@ a {
   opacity: 0.3;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
-  background: linear-gradient(110deg, #005da1 0%, #923b8d 100%);
+  background: linear-gradient(110deg, #136bb1 0%, #923b8d 100%);
+}
+
+header .eProcure-logo {
+  height: 100%;
+}
+header .first-row {
+  padding: 12px 0;
+}
+header .categories-row {
+  background-color: #f6f6f7;
+}
+header .categories-row a {
+  padding: 14px 20px;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+header .categories-row a:hover {
+  background-color: #efeff1;
+}
+header .categories-row a.active {
+  background-color: #e5e5e7;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=styles.css.map */

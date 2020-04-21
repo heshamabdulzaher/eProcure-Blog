@@ -5,14 +5,19 @@ header {
   .first-row {
     padding: 12px 0;
   }
-  ul {
-    list-style-type: none;
-  }
   .categories {
     background-color: $gColor;
+    ul {
+      list-style-type: none;
+      overflow-x: auto;
+      &::-webkit-scrollbar {
+        height: 0;
+      }
+    }
     a {
       padding: 14px 20px;
       transition: 0.2s ease-in;
+      white-space: nowrap;
       &:hover {
         background-color: #efeff1;
       }
@@ -48,5 +53,18 @@ header {
     background-color: $pColor;
     transform: scaleX(0);
     transform-origin: left;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .categories .main-container {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header .eProcure-logo,
+  .sticky-header .eProcure-logo {
+    width: 110px;
   }
 }

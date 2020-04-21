@@ -81,21 +81,38 @@ a {
   opacity: 0.7;
 }
 
+@media screen and (max-width: 480px) {
+  .main-container {
+    padding: 0 20px;
+  }
+
+  .btn {
+    height: 44px;
+    line-height: 44px;
+    padding: 0 22px;
+    font-size: 15px;
+  }
+}
 header .eProcure-logo {
   height: 100%;
 }
 header .first-row {
   padding: 12px 0;
 }
-header ul {
-  list-style-type: none;
-}
 header .categories {
   background-color: #f6f6f7;
+}
+header .categories ul {
+  list-style-type: none;
+  overflow-x: auto;
+}
+header .categories ul::-webkit-scrollbar {
+  height: 0;
 }
 header .categories a {
   padding: 14px 20px;
   transition: 0.2s ease-in;
+  white-space: nowrap;
 }
 header .categories a:hover {
   background-color: #efeff1;
@@ -132,6 +149,17 @@ header .categories a.active {
   transform-origin: left;
 }
 
+@media screen and (max-width: 580px) {
+  .categories .main-container {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  header .eProcure-logo,
+.sticky-header .eProcure-logo {
+    width: 110px;
+  }
+}
 .article-banner .cover {
   height: 400px;
   background-image: linear-gradient(130deg, #48c6ef 0%, #6f86d6 100%);
@@ -178,6 +206,16 @@ header .categories a.active {
   color: #136bb1;
 }
 
+@media screen and (max-width: 1000px) {
+  .articles .main-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 700px) {
+  .articles .main-container {
+    grid-template-columns: 1fr;
+  }
+}
 .article-body {
   padding-top: 30px;
   font-size: 17px;
@@ -241,17 +279,39 @@ header .categories a.active {
   color: #000;
   height: 60px;
   border-radius: 100px;
-  padding-right: 6px;
+  position: relative;
 }
 .article-body .subscribe .form-group input {
   width: 100%;
   height: 100%;
-  padding: 0 14px 0 30px;
+  padding: 0 170px 0 30px;
   font-size: 17px;
 }
 .article-body .subscribe .form-group .btn {
   border-radius: 100px;
   box-shadow: 0 2px 6px rgba(19, 107, 177, 0.3);
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  height: calc(100% - 12px);
+}
+
+@media screen and (max-width: 480px) {
+  .article-body h2 {
+    font-size: 24px;
+    margin-top: 42px;
+    line-height: 36px;
+    margin-bottom: 18px;
+  }
+  .article-body h3 {
+    font-size: 20px;
+    margin-top: 38px;
+    margin-bottom: 18px;
+  }
+  .article-body .subscribe .form-group input {
+    padding: 0px 125px 0 30px;
+    font-size: 15px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

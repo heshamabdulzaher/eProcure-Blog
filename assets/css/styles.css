@@ -6,7 +6,7 @@
   outline: 0;
   max-width: 100%;
   line-height: 1.5;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
 }
 
 body {
@@ -156,6 +156,9 @@ header .categories-row a.active {
   padding-top: 30px;
   font-size: 17px;
   color: #000;
+}
+.article-body * {
+  font-family: "Roboto", sans-serif !important;
 }
 .article-body .main-container {
   max-width: 800px;

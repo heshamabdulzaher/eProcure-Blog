@@ -147,6 +147,7 @@ header .categories a.active {
   background-color: #136bb1;
   transform: scaleX(0);
   transform-origin: left;
+  transition: 0.1s linear;
 }
 
 @media screen and (max-width: 580px) {
@@ -157,7 +158,7 @@ header .categories a.active {
 @media screen and (max-width: 480px) {
   header .eProcure-logo,
 .sticky-header .eProcure-logo {
-    width: 110px;
+    width: 130px;
   }
 }
 .article-banner .cover {
@@ -309,7 +310,7 @@ header .categories a.active {
     margin-bottom: 18px;
   }
   .article-body .subscribe .form-group input {
-    padding: 0px 125px 0 30px;
+    padding: 0px 125px 0 20px;
     font-size: 15px;
   }
 }

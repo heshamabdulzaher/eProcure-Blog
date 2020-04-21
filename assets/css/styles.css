@@ -90,17 +90,17 @@ header .first-row {
 header ul {
   list-style-type: none;
 }
-header .categories-row {
+header .categories {
   background-color: #f6f6f7;
 }
-header .categories-row a {
+header .categories a {
   padding: 14px 20px;
   transition: 0.2s ease-in;
 }
-header .categories-row a:hover {
+header .categories a:hover {
   background-color: #efeff1;
 }
-header .categories-row a.active {
+header .categories a.active {
   background-color: rgba(77, 190, 236, 0.13);
   color: #136bb1;
   font-weight: bold;

@@ -29,13 +29,13 @@
           >
         </div>
       </div>
-      <div class="categories-row">
+      <div class="categories">
         <div class="main-container">
           <ul class="flex align-center">
-            <li><a class="active">All Gategories</a></li>
-            <li><a>Category 1</a></li>
-            <li><a>Category 2</a></li>
-            <li><a>Category 3</a></li>
+            <li><a data-category="all">All Gategories</a></li>
+            <li><a data-category="category1">Category 1</a></li>
+            <li><a data-category="category2">Category 2</a></li>
+            <li><a data-category="category3">Category 3</a></li>
           </ul>
         </div>
       </div>
@@ -53,7 +53,7 @@
 
     <section class="articles">
       <div class="main-container">
-        <a href="/article/" class="article-card">
+        <a href="/article/" class="article-card" data-category="category1">
           <div class="cover"></div>
           <div class="content">
             <div class="details flex align-center justify-between">
@@ -65,7 +65,7 @@
             </div>
           </div>
         </a>
-        <a href="/article/" class="article-card">
+        <a href="/article/" class="article-card" data-category="category2">
           <div class="cover"></div>
           <div class="content">
             <div class="details flex align-center justify-between">
@@ -77,7 +77,7 @@
             </div>
           </div>
         </a>
-        <a href="/article/" class="article-card">
+        <a href="/article/" class="article-card" data-category="category2">
           <div class="cover"></div>
           <div class="content">
             <div class="details flex align-center justify-between">
@@ -89,7 +89,7 @@
             </div>
           </div>
         </a>
-        <a href="/article/" class="article-card">
+        <a href="/article/" class="article-card" data-category="category3">
           <div class="cover"></div>
           <div class="content">
             <div class="details flex align-center justify-between">
@@ -101,7 +101,7 @@
             </div>
           </div>
         </a>
-        <a href="/article/" class="article-card">
+        <a href="/article/" class="article-card" data-category="category3">
           <div class="cover"></div>
           <div class="content">
             <div class="details flex align-center justify-between">
@@ -113,7 +113,7 @@
             </div>
           </div>
         </a>
-        <a href="/article/" class="article-card">
+        <a href="/article/" class="article-card" data-category="category3">
           <div class="cover"></div>
           <div class="content">
             <div class="details flex align-center justify-between">
@@ -127,5 +127,7 @@
         </a>
       </div>
     </section>
+
+    <script src="/assets/js/main.js"></script>
   </body>
 </html>

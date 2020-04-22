@@ -1,5 +1,10 @@
 // Show sticky header only at Article page
 if (window.location.pathname.includes('/article')) {
+  stickyHeader();
+  stickyShareArticleBar();
+}
+
+function stickyHeader() {
   const header = document.querySelector('.sticky-header');
   let progressBar = header.querySelector('.progress-scroll-bar');
   let scrollProgressPercentage = 0;
@@ -13,6 +18,31 @@ if (window.location.pathname.includes('/article')) {
       header.classList.remove('show');
     }
   });
+}
+
+function stickyShareArticleBar() {
+  const articleBody = document.querySelector('.article-body');
+  const shareArticleElm = document.querySelector(
+    '.article-body .share-article'
+  );
+  const start = articleBody.offsetTop;
+  const end = articleBody.offsetTop + articleBody.offsetHeight - 300;
+  window.onscroll = function (e) {
+    if (window.scrollY <= start) {
+      // Before
+      shareArticleElm.style.position = 'absolute';
+      shareArticleElm.style.top = '120px';
+      shareArticleElm.style.bottom = 'auto';
+    } else if (window.scrollY > start && window.scrollY <= end) {
+      shareArticleElm.style.position = 'fixed';
+      shareArticleElm.style.top = '120px';
+      shareArticleElm.style.bottom = 'auto';
+    } else if (window.scrollY > end) {
+      shareArticleElm.style.position = 'absolute';
+      shareArticleElm.style.top = 'auto';
+      shareArticleElm.style.bottom = '0';
+    }
+  };
 }
 
 window.onload = function () {

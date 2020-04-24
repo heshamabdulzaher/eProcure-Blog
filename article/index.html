@@ -26,9 +26,11 @@
             href="https://e-procure.netlify.app/"
             target="_blank"
             rel="noopener"
-            class="btn main-btn"
-            >Website</a
+            class="btn main-btn flex flex-center"
           >
+            Website
+            <ion-icon name="open-outline"></ion-icon>
+          </a>
         </div>
       </div>
       <div class="categories">
@@ -56,9 +58,11 @@
           href="https://e-procure.netlify.app/"
           target="_blank"
           rel="noopener"
-          class="btn main-btn"
-          >Website</a
+          class="btn main-btn flex flex-center"
         >
+          Website
+          <ion-icon name="open-outline"></ion-icon>
+        </a>
       </div>
       <div class="progress-scroll-bar"></div>
     </div>
@@ -76,7 +80,7 @@
     </section>
 
     <section class="article-body">
-      <ul class="share-article">
+      <ul class="socialShare_desktop">
         <li>
           <a href="#" target="_blank" rel="noopener">
             <img src="/assets/img/icons/twitter.svg" alt="Twitter icon" />
@@ -93,12 +97,36 @@
           </a>
         </li>
       </ul>
-      <!-- <a
-          href="https://twitter.com/intent/tweet?text=Hello World @eProcure"
-          target="blank"
-          rel="noopener noreferrer"
-          >Test</a
-        > -->
+      <div class="socialShare_mobile">
+        <a
+          class="twitter"
+          target="_blank"
+          rel="noopener"
+          href="https://twitter.com/intent/tweet?text=eProcure Blog%0a👇🏼%0aArticleTitle"
+        >
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+        <a
+          class="facebook"
+          target="_blank"
+          rel="noopener"
+          href="https://www.facebook.com/sharer.php?quote=eProcure Blog%0aArticleTitle&u=https://blog-eprocure.netlify.app/"
+        >
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+        <a class="copyURL" target="_blank" rel="noopener">
+          <ion-icon name="link"></ion-icon>
+        </a>
+        <a
+          class="toggleShareIcons"
+          target="_blank"
+          rel="noopener"
+          onclick="toggleShareIcons()"
+        >
+          <ion-icon name="share-social"></ion-icon>
+          <ion-icon name="close" class="hide"></ion-icon>
+        </a>
+      </div>
       <div class="main-container">
         <h3>This blog post will cover:</h3>
         <ul>
@@ -318,25 +346,31 @@
         </ul>
         <h3>Want to increase your B2B Sales Sign-up to e-Procure for free</h3>
       </div>
+      <!-- <a
+          href="https://twitter.com/intent/tweet?text=Hello World @eProcure"
+          target="blank"
+          rel="noopener noreferrer"
+          >Test</a
+        > -->
     </section>
-      <div class="subscribe">
-        <div class="main-container">
-          <h2>Join 251,101 customer-obsessed readers on our mailing list.</h2>
-          <form>
-            <div class="form-group flex justify-between align-center">
-              <input
-                required
-                type="email"
-                id="test"
-                name="email"
-                placeholder="Email Address"
-                pattern="[a-z0-9A-Z._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-              />
-              <button type="button" class="btn main-btn">Subscribe</button>
-            </div>
-          </form>
-        </div>
+    <div class="subscribe">
+      <div class="main-container">
+        <h2>Join 251,101 customer-obsessed readers on our mailing list.</h2>
+        <form>
+          <div class="form-group flex justify-between align-center">
+            <input
+              required
+              type="email"
+              id="test"
+              name="email"
+              placeholder="Email Address"
+              pattern="[a-z0-9A-Z._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            />
+            <button type="button" class="btn main-btn">Subscribe</button>
+          </div>
+        </form>
       </div>
+    </div>
     <!-- RECOMENDED ARTICLES -->
     <section class="articles">
       <div class="section-title">RECOMENDED ARTICLES</div>
@@ -380,6 +414,7 @@
       </div>
     </section>
 
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <script src="/assets/js/main.js"></script>
   </body>
 </html>

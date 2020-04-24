@@ -185,6 +185,9 @@ header .categories a.active {
     width: 130px;
   }
 }
+.article-banner {
+  width: 100%;
+}
 .article-banner .cover {
   height: 400px;
   background-image: linear-gradient(130deg, #48c6ef 0%, #6f86d6 100%);
@@ -207,6 +210,10 @@ header .categories a.active {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+}
+.articles ion-icon {
+  font-size: 20px;
+  margin-right: 6px;
 }
 .articles .article-card {
   border-radius: 5px;
@@ -323,43 +330,37 @@ header .categories a.active {
 }
 
 .socialShare_desktop {
-  padding: 6px !important;
-  margin: 0 !important;
-  list-style-type: none !important;
-  border: 2px solid #f0f0f0;
-  border-right: 0;
-  border-radius: 8px 0 0 8px;
-  background-color: #f8f8f8;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 62px;
   position: sticky;
   top: 120px;
   float: right;
-  display: none;
-}
-.socialShare_desktop li {
-  margin: 0 !important;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #1d2b36;
+  margin-top: 200px;
+  border-right: 0;
+  border-radius: 5px 0 0 5px;
+  box-shadow: 2px 3px 5px 1px rgba(29, 43, 54, 0.23);
+  overflow: hidden;
 }
 .socialShare_desktop a {
+  padding: 12px 15px;
+  font-size: 20px;
   display: flex;
-  padding: 8px;
-  margin-bottom: 8px;
+  color: #fff;
 }
-.socialShare_desktop a:last-of-type {
-  margin-bottom: 0;
+.socialShare_desktop a:hover.facebook {
+  background-color: #4267b2;
 }
-.socialShare_desktop a:hover img {
-  transform: scale(1.2);
+.socialShare_desktop a:hover.twitter {
+  background-color: #1da1f2;
 }
-.socialShare_desktop img {
-  transition: 0.1s ease-out;
-  max-width: 100%;
-  max-height: 100%;
+.socialShare_desktop a:hover.copyURL {
+  background-color: #16a085;
 }
 
 .socialShare_mobile {
+  display: none;
   float: right;
   position: sticky;
   top: calc(100vh - 120px);
@@ -431,6 +432,15 @@ header .categories a.active {
   box-shadow: 1px 3px 7px 2px rgba(22, 160, 132, 0.4);
 }
 
+@media screen and (max-width: 900px) {
+  .socialShare_desktop {
+    display: none;
+  }
+
+  .socialShare_mobile {
+    display: block;
+  }
+}
 @media screen and (max-width: 480px) {
   .article-body h2 {
     font-size: 24px;

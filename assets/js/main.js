@@ -78,6 +78,22 @@ function filterCategories() {
   }
 }
 
+function copyURL() {
+  const copyURLSuccessMsg = document.querySelector('.copyURLSuccessMsg');
+  copyURLSuccessMsg.style.transform = 'translateY(0)';
+  const tempInput = document.createElement('input');
+  tempInput.style = 'position: absolute; left: -1000px; top: -1000px';
+  tempInput.value = window.location.href;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand('copy');
+  tempInput.blur();
+  document.body.removeChild(tempInput);
+  setTimeout((e) => {
+    copyURLSuccessMsg.style.transform = 'translateY(-150%)';
+  }, 2000);
+}
+
 function addSearchParam(e) {
   activeCategory = e.target.dataset.category;
   if (activeCategory != 'all') {

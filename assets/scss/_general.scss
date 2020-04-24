@@ -67,6 +67,25 @@ a {
   }
 }
 
+.copyURLSuccessMsg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  background-color: #16a085;
+  box-shadow: 1px 3px 7px 2px rgba(22, 160, 132, 0.1);
+  transform: translateY(-150%);
+  transition: 0.2s ease-in-out;
+  padding: 4px 10px;
+  ion-icon {
+    font-size: 25px;
+    margin-left: 12px;
+  }
+}
+
 .section-title {
   text-align: center;
   position: relative;

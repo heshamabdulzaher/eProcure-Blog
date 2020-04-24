@@ -66,6 +66,11 @@
       </div>
       <div class="progress-scroll-bar"></div>
     </div>
+    <!-- URL copied successfully message -->
+    <div class="copyURLSuccessMsg flex flex-center">
+      URL copied successfully
+      <ion-icon name="checkmark-circle-outline"></ion-icon>
+    </div>
     <!-- Featured article banner -->
     <section class="article-banner">
       <div class="cover"></div>
@@ -98,13 +103,28 @@
         </li>
       </ul>
       <div class="socialShare_mobile">
-        <a class="twitter" target="_blank" rel="noopener">
+        <a
+          class="twitter"
+          target="_blank"
+          rel="noopener"
+          onclick="toggleShareIcons()"
+        >
           <ion-icon name="logo-twitter"></ion-icon>
         </a>
-        <a class="facebook" target="_blank" rel="noopener">
+        <a
+          class="facebook"
+          target="_blank"
+          rel="noopener"
+          onclick="toggleShareIcons()"
+        >
           <ion-icon name="logo-facebook"></ion-icon>
         </a>
-        <a class="copyURL" target="_blank" rel="noopener">
+        <a
+          class="copyURL"
+          target="_blank"
+          rel="noopener"
+          onclick="copyURL(); toggleShareIcons()"
+        >
           <ion-icon name="link"></ion-icon>
         </a>
         <a

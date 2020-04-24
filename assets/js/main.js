@@ -34,7 +34,24 @@ function stickyHeader() {
 
 window.onload = function () {
   filterCategories();
+  fillSocialLinks();
 };
+
+function fillSocialLinks() {
+  const facebook = document.querySelector('a.facebook');
+  const twitter = document.querySelector('a.twitter');
+  const mainMsg = 'eProcure Blog';
+  const articleTitle = document.querySelector('.article-banner h2').innerText;
+  facebook.setAttribute(
+    'href',
+    `https://www.facebook.com/sharer.php?quote=${mainMsg}%0a${articleTitle}&u=${window.location.href}`
+  );
+  twitter.setAttribute(
+    'href',
+    `https://twitter.com/intent/tweet?text=${mainMsg}%0a${articleTitle}%0a${window.location.href}`
+  );
+}
+
 // Filter Articles by category
 let categoriesLinks = document.querySelectorAll('.categories a');
 let articles = document.querySelectorAll('.articles .article-card');

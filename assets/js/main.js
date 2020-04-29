@@ -16,6 +16,22 @@ function toggleShareIcons() {
   socialShare_mobile.classList.toggle('show');
 }
 
+function copyURL() {
+  const copyURLSuccessMsg = document.querySelector('.copyURLSuccessMsg');
+  copyURLSuccessMsg.style.transform = 'translateY(0)';
+  const tempInput = document.createElement('input');
+  tempInput.style = 'position: absolute; left: -1000px; top: -1000px';
+  tempInput.value = window.location.href;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand('copy');
+  tempInput.blur();
+  document.body.removeChild(tempInput);
+  setTimeout((e) => {
+    copyURLSuccessMsg.style.transform = 'translateY(-150%)';
+  }, 2000);
+}
+
 function stickyHeader() {
   const header = document.querySelector('.sticky-header');
   let progressBar = header.querySelector('.progress-scroll-bar');
@@ -38,18 +54,24 @@ window.onload = function () {
 };
 
 function fillSocialLinks() {
-  const facebook = document.querySelector('a.facebook');
-  const twitter = document.querySelector('a.twitter');
   const mainMsg = 'eProcure Blog';
   const articleTitle = document.querySelector('.article-banner h2').innerText;
-  facebook.setAttribute(
-    'href',
-    `https://www.facebook.com/sharer.php?quote=${mainMsg}%0a${articleTitle}&u=${window.location.href}`
-  );
-  twitter.setAttribute(
-    'href',
-    `https://twitter.com/intent/tweet?text=${mainMsg}%0a${articleTitle}%0a${window.location.href}`
-  );
+
+  const facebookLinks = document.querySelectorAll('a.facebook');
+  facebookLinks.forEach((facebook) => {
+    facebook.setAttribute(
+      'href',
+      `https://www.facebook.com/sharer.php?quote=${mainMsg}%0a${articleTitle}&u=${window.location.href}`
+    );
+  });
+
+  const twitterLinks = document.querySelectorAll('a.twitter');
+  twitterLinks.forEach((facebook) => {
+    twitter.setAttribute(
+      'href',
+      `https://twitter.com/intent/tweet?text=${mainMsg}%0a${articleTitle}%0a${window.location.href}`
+    );
+  });
 }
 
 // Filter Articles by category
@@ -76,22 +98,6 @@ function filterCategories() {
       }
     });
   }
-}
-
-function copyURL() {
-  const copyURLSuccessMsg = document.querySelector('.copyURLSuccessMsg');
-  copyURLSuccessMsg.style.transform = 'translateY(0)';
-  const tempInput = document.createElement('input');
-  tempInput.style = 'position: absolute; left: -1000px; top: -1000px';
-  tempInput.value = window.location.href;
-  document.body.appendChild(tempInput);
-  tempInput.select();
-  document.execCommand('copy');
-  tempInput.blur();
-  document.body.removeChild(tempInput);
-  setTimeout((e) => {
-    copyURLSuccessMsg.style.transform = 'translateY(-150%)';
-  }, 2000);
 }
 
 function addSearchParam(e) {
